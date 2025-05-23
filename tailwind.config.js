@@ -1,6 +1,20 @@
- /** @type {import('tailwindcss').Config} */
- export default {
-  content: ['index.html'],
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    './index.html',
+    './script.js',
+  ],
+  safelist: [
+    'hidden',
+    'opacity-0',
+    'opacity-100',
+    'scale-95',
+    'scale-100',
+    'transition-all',
+    'duration-300',
+    'ease-in-out',
+    'transform',
+  ],
   theme: {
     container: {
       center: true,
@@ -14,6 +28,9 @@
       },
       screens: {
         '2xl': '1320px',
+      },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
       },
     },
   },
